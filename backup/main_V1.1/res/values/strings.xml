@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">家庭银行</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="holder_string">账户持有人</string>
-</resources>
