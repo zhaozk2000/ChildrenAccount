@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transactions.TransactionActivity">
+
+    <TextView
+        android:id="@+id/textView_transaction_yuan2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="元"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_transaction_account"
+        app:layout_constraintTop_toTopOf="@+id/textView_transaction_afterBalance" />
+
+    <TextView
+        android:id="@+id/textView_transaction_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/holder_string"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_transaction_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="账户名称"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_transaction_account"
+        app:layout_constraintTop_toBottomOf="@+id/textView_transaction_holder" />
+
+    <Spinner
+        android:id="@+id/spinner_transaction_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="操作类别"
+        android:minHeight="48dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toStartOf="@+id/button_category_management"
+        app:layout_constraintStart_toStartOf="@+id/spinner_transaction_account"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_transaction_account" />
+
+    <TextView
+        android:id="@+id/textView_transaction_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="账户"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_transaction_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinner_transaction_account" />
+
+    <TextView
+        android:id="@+id/textView_transaction_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="类型"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_transaction_category"
+        app:layout_constraintStart_toStartOf="@+id/textView_transaction_account"
+        app:layout_constraintTop_toTopOf="@+id/spinner_transaction_category" />
+
+    <Button
+        android:id="@+id/button_category_management"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="管理"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_transaction_account"
+        app:layout_constraintTop_toTopOf="@+id/spinner_transaction_category" />
+
+    <TextView
+        android:id="@+id/textView_transaction_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="金额"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBaseline_toBaselineOf="@id/editTextNumberDecimal_transaction_amount"
+        app:layout_constraintStart_toStartOf="@+id/textView_transaction_category"
+        app:layout_constraintTop_toBottomOf="@+id/button_category_management" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal_transaction_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="交易金额"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_transaction_yuan"
+        app:layout_constraintStart_toEndOf="@+id/textView_transaction_sign"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_transaction_category" />
+
+    <TextView
+        android:id="@+id/textView_transaction_yuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="元"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_transaction_account"
+        app:layout_constraintTop_toTopOf="@+id/textView_transaction_amount" />
+
+    <TextView
+        android:id="@+id/textView_transaction_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="时间"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/textView_transaction_amount"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_transaction_fromto" />
+
+    <TextView
+        android:id="@+id/textView_transaction_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2025-2-22"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/textView_transaction_sign"
+        app:layout_constraintTop_toTopOf="@+id/textView_transaction_date_title" />
+
+    <TextView
+        android:id="@+id/textView_transaction_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="备注"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBaseline_toBaselineOf="@id/editText_transaction_notes"
+        app:layout_constraintStart_toStartOf="@+id/textView_transaction_date_title" />
+
+    <EditText
+        android:id="@+id/editText_transaction_notes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="备注"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_transaction_account"
+        app:layout_constraintStart_toStartOf="@+id/textView_transaction_date"
+        app:layout_constraintTop_toBottomOf="@+id/textView_transaction_date" />
+
+    <Button
+        android:id="@+id/button_transaction_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="创建交易"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal_transaction_afterbalance" />
+
+    <TextView
+        android:id="@+id/textView_transaction_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="11:23"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toEndOf="@+id/textView_transaction_date"
+        app:layout_constraintTop_toTopOf="@+id/textView_transaction_date" />
+
+    <TextView
+        android:id="@+id/textView_transaction_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/spinner_transaction_account"
+        app:layout_constraintTop_toTopOf="@+id/textView_transaction_amount" />
+
+    <Button
+        android:id="@+id/button_transaction_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除交易"
+        app:layout_constraintEnd_toStartOf="@+id/button_transaction_create"
+        app:layout_constraintTop_toTopOf="@+id/button_transaction_create" />
+
+    <Button
+        android:id="@+id/button_transaction_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改交易"
+        app:layout_constraintStart_toEndOf="@+id/button_transaction_create"
+        app:layout_constraintTop_toTopOf="@+id/button_transaction_delete" />
+
+    <Spinner
+        android:id="@+id/spinner_transaction_fromto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="金额的来源或去向"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/button_transaction_fromto_manage"
+        app:layout_constraintStart_toStartOf="@+id/textView_transaction_sign"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal_transaction_amount" />
+
+    <TextView
+        android:id="@+id/textView_transaction_fromto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="来源"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_transaction_fromto"
+        app:layout_constraintStart_toStartOf="@+id/textView_transaction_amount"
+        app:layout_constraintTop_toTopOf="@+id/spinner_transaction_fromto" />
+
+    <Button
+        android:id="@+id/button_transaction_fromto_manage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="管理"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_transaction_fromto"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_transaction_account"
+        app:layout_constraintTop_toTopOf="@+id/spinner_transaction_fromto"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal_transaction_afterbalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumberDecimal_transaction_amount"
+        app:layout_constraintStart_toEndOf="@+id/textView_transaction_afterBalance"
+        app:layout_constraintTop_toBottomOf="@+id/editText_transaction_notes" />
+
+    <TextView
+        android:id="@+id/textView_transaction_afterBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="交易后余额"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumberDecimal_transaction_afterbalance"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberDecimal_transaction_afterbalance"
+        tools:layout_editor_absoluteX="23dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

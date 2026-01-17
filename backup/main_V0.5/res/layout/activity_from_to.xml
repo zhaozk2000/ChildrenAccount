@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transactions.FromToActivity">
+
+    <TextView
+        android:id="@+id/textView_fromto_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="对方名称："
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_fromto_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="来源/去向"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/textView_fromto_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_fromto_name" />
+
+    <Button
+        android:id="@+id/button_fromto_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="创建"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dropdownList_fromto_direction" />
+
+    <com.zzk.childrenbank.statistic.DropdownList
+        android:id="@+id/dropdownList_fromto_direction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:contentDescription="资金的来源或去向"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_fromto_name"
+        app:layout_constraintStart_toStartOf="@+id/editText_fromto_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_fromto_name" />
+
+    <TextView
+        android:id="@+id/textView_fromto_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="资金方向："
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/dropdownList_fromto_direction"
+        app:layout_constraintStart_toStartOf="@+id/textView_fromto_name"
+        app:layout_constraintTop_toTopOf="@+id/dropdownList_fromto_direction" />
+</androidx.constraintlayout.widget.ConstraintLayout>

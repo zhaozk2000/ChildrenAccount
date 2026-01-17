@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuitem_childrenManagement"
+        android:title="儿童管理" />
+    <item
+        android:id="@+id/menuitem_accountManagement"
+        android:title="账户管理" />
+    <item
+        android:id="@+id/menuitem_statistic"
+        android:title="统计" />
+</menu>

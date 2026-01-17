@@ -1,0 +1,2 @@
+# ChildrenAccount
+给家庭儿童零花钱记账用的Android应用

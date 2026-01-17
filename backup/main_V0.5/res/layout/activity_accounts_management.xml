@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".accounts.AccountsManagementActivity">
+
+    <Button
+        android:id="@+id/button_newAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="添加"
+        app:layout_constraintStart_toStartOf="@+id/textViewChild"
+        app:layout_constraintTop_toBottomOf="@id/textViewChild" />
+
+    <Button
+        android:id="@+id/button_deleteAllAccounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="清空"
+        app:layout_constraintStart_toEndOf="@+id/button_newAccount"
+        app:layout_constraintTop_toTopOf="@+id/button_newAccount" />
+
+    <ListView
+        android:id="@+id/listview_accountList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewChild"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNote" />
+
+    <TextView
+        android:id="@+id/textViewNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="点击条目编辑，长按条目删除"
+        app:layout_constraintStart_toStartOf="@+id/textViewChild"
+        app:layout_constraintTop_toBottomOf="@+id/button_newAccount" />
+
+    <TextView
+        android:id="@+id/textViewChild"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="儿童"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
